@@ -1,1 +1,1 @@
-# ruby-exercises
+Doing some exercises in ruby
