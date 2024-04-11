@@ -1,7 +1,7 @@
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
-def substrings(word, dictionary)
-	word.downcase.split.reduce(Hash.new(0)) do |hash, word|
+def substrings(words, dictionary)
+	words.downcase.split.reduce(Hash.new(0)) do |hash, word|
 		dictionary.each do |dict|
 			if word.include?(dict)
 				hash[dict] += 1
