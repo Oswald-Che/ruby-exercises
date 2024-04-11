@@ -1,13 +1,13 @@
 def stock_picker(array)
   price = 0
   dates = []
-  array.each_with_index do |buy, b_index|
-    array.each_with_index do |sell, s_index|
-      next if s_index < b_index
+  array.each_with_index do |buy_price, buy_date|
+    array.each_with_index do |sell_price, sell_date|
+      next if sell_date < buy_date
 
-      if sell - buy > price
-        price = sell - buy
-        dates = [b_index, s_index]
+      if sell_price - buy_price > price
+        price = sell_price - buy_price
+        dates = [buy_date, sell_date]
       end
     end
   end
