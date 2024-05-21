@@ -9,5 +9,14 @@ describe CaeserCipher do
       expect(cipher.caeser_cipher(string, shift)).to eq('ffg')
     end
 
+
+    it 'shift letters correctly for negative shift' do
+      cipher = CaeserCipher.new
+      string = 'aab'
+      shift = -2
+      expect(cipher.caeser_cipher(string, shift)).to eq('yyz')
+    end
+
+
   end
 end
