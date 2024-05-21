@@ -25,5 +25,13 @@ describe CaeserCipher do
       expect(cipher.caeser_cipher(string, shift)).to eq('DdFg')
     end
 
+
+    it 'shifts only letters' do
+      cipher = CaeserCipher.new
+      string = 'Hello World!'
+      shift = 3
+      expect(cipher.caeser_cipher(string, shift)).to eq('Khoor Zruog!')
+    end
+
   end
 end
