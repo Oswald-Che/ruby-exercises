@@ -33,5 +33,12 @@ describe CaeserCipher do
       expect(cipher.caeser_cipher(string, shift)).to eq('Khoor Zruog!')
     end
 
+    it 'wraps around the alphabet' do
+      cipher = CaeserCipher.new
+      string = 'Zxy Vrt'
+      shift = 4
+      expect(cipher.caeser_cipher(string, shift)).to eq('Dbc Zvx')
+    end
+
   end
 end
