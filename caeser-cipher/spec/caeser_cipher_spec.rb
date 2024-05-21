@@ -17,6 +17,13 @@ describe CaeserCipher do
       expect(cipher.caeser_cipher(string, shift)).to eq('yyz')
     end
 
+    
+    it 'Keeps casing' do
+      cipher = CaeserCipher.new
+      string = 'AaCd'
+      shift = 3
+      expect(cipher.caeser_cipher(string, shift)).to eq('DdFg')
+    end
 
   end
 end
